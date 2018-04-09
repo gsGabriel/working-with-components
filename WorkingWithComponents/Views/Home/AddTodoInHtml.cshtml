@@ -1,0 +1,8 @@
+﻿@model WorkingWithComponents.ViewModels.Todo.TodoItemViewModel
+@using WorkingWithComponents.Extensions
+
+@{
+    Layout = null;
+}
+
+@Html.AddComponent("Todo", action: "ComponentAdd", title: "Add Todo item").WithRedirect("Index", "Home").Build()
