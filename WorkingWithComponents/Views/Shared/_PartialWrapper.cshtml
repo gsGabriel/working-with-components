@@ -1,0 +1,9 @@
+﻿@using WorkingWithComponents.ViewModels.Common
+@model WrapperViewModel
+
+@foreach (var component in Model.Components)
+{
+    <h4>@component.Title.ToUpper()</h4>
+    
+    @Html.Action(component.Action, component.Controller, component.RouteValues)
+}
